@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="/dist/output.css">
-    </head>
-    <body class="bg-gray-100">
-        <p>Welcome</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonin Maystre - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional custom styles */
+        .profile-image {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-100 py-4 shadow">
+        <div class="container mx-auto flex justify-between">
+            <div class="font-bold text-xl">Antonin Maystre</div>
+            <ul class="flex space-x-6">
+                <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
+                <li><a href="#education" class="hover:text-blue-500">Education</a></li>
+                <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-10 bg-gray-50">
+        <div class="container mx-auto">
+            <img src="path_to_your_image.png" alt="Profile Picture" class="profile-image mx-auto mb-4">
+            <h1 class="text-4xl font-bold">Welcome, I'm Antonin Maystre</h1>
+            <p class="text-gray-600 mt-4">Passionate Software Engineer specializing in Fullstack Development, Agile Methodologies, and Project Management.</p>
+            <div class="mt-6">
+                <a href="#" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">Hire Me</a>
+                <a href="#contact" class="ml-4 text-blue-500 hover:underline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Experience</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Apprentice Fullstack Engineer (2021 – Present)</h3>
+                    <p class="text-gray-700">La Poste Groupe - France</p>
+                    <ul class="list-disc ml-6 text-gray-600">
+                        <li>Developed APIs in Java (Spring Boot) within a microservices architecture and Agile SCRUM environment.</li>
+                        <li>Led a smartphone transaction back-office project using Next.js and TypeScript.</li>
+                        <li>Implemented Quarkus modules with native compilation and deployed using Docker, Jenkins, and OpenShift.</li>
+                        <li>Collaborated with a team of 15 members to ensure high-quality, maintainable code.</li>
+                        <li>Led project end-to-end, ensuring communication between stakeholders and team members.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-10 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Education</h2>
+            <div>
+                <h3 class="text-xl font-semibold">Master of Science in Software Engineering (2021 – September 2024)</h3>
+                <p class="text-gray-700">IMT Atlantique - France</p>
+            </div>
+            <div class="mt-4">
+                <h3 class="text-xl font-semibold">Associate's Degree in Computer Science (2019 – 2021)</h3>
+                <p class="text-gray-700">IUT de Bayonne et du Pays Basque - France</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Projects</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-xl font-semibold">RAIMED 2 Diagnostic App</h3>
+                    <p class="text-gray-700">Developed a Vue.js diagnostic app for medical students in collaboration with Nantes University Hospital.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Web Interface for Teachers</h3>
+                    <p class="text-gray-700">Developed a Vue.js web interface to manage student information and monitor activity.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Weather and Flight Sensor Data Project</h3>
+                    <p class="text-gray-700">Developed a Go project to retrieve and return weather data from airport sensors including temperature, wind speed, and pressure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600">&copy; 2024 Antonin Maystre - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
