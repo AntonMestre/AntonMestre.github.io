@@ -6,21 +6,52 @@
     <title>Antonin Maystre - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Additional custom styles */
+        /* Styles pour des effets d'apparition */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Style pour un effet luxueux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
         .profile-image {
             border-radius: 50%;
             object-fit: cover;
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        h3 {
+            font-size: 1.75rem;
+            color: #555;
+        }
+        /* Footer */
+        footer {
+            background-color: #f3f4f6;
+            color: #555;
         }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
     <!-- Navigation -->
-    <nav class="bg-gray-100 py-4 shadow">
+    <nav class="bg-white py-4 shadow-lg sticky top-0 z-10">
         <div class="container mx-auto flex justify-between">
-            <div class="font-bold text-xl">Antonin Maystre</div>
+            <div class="font-bold text-2xl text-gray-700">Antonin Maystre</div>
             <ul class="flex space-x-6">
                 <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
                 <li><a href="#education" class="hover:text-blue-500">Education</a></li>
@@ -30,32 +61,41 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="text-center py-10 bg-gray-50">
-        <div class="container mx-auto">
-            <img src="path_to_your_image.png" alt="Profile Picture" class="profile-image mx-auto mb-4">
-            <h1 class="text-4xl font-bold">Welcome, I'm Antonin Maystre</h1>
-            <p class="text-gray-600 mt-4">Passionate Software Engineer specializing in Fullstack Development, Agile Methodologies, and Project Management.</p>
-            <div class="mt-6">
-                <a href="#" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">Hire Me</a>
-                <a href="#contact" class="ml-4 text-blue-500 hover:underline">Contact Me</a>
+    <section class="text-center py-20 bg-gray-50">
+        <div class="container mx-auto fade-in">
+            <img src="path_to_your_image.png" alt="Profile Picture" class="profile-image mx-auto mb-8">
+            <h1 class="text-5xl font-semibold">Antonin Maystre</h1>
+            <p class="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">Passionate Software Engineer with expertise in Fullstack Development, Agile Methodologies, and Project Management. Focused on delivering clean and innovative solutions.</p>
+            <div class="mt-10">
+                <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all">Hire Me</a>
+                <a href="#contact" class="ml-6 text-blue-600 hover:underline">Contact Me</a>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Experience</h2>
-            <div class="space-y-4">
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto fade-in">
+            <h2 class="text-4xl font-bold mb-10 text-center">Experience</h2>
+            <div class="space-y-12">
                 <div>
-                    <h3 class="text-xl font-semibold">Apprentice Fullstack Engineer (2021 – Present)</h3>
+                    <h3 class="text-2xl font-semibold">Junior Fullstack Engineer (2021 – Present)</h3>
                     <p class="text-gray-700">La Poste Groupe - France</p>
-                    <ul class="list-disc ml-6 text-gray-600">
+                    <ul class="list-disc ml-6 mt-4 text-gray-600 space-y-2">
                         <li>Developed APIs in Java (Spring Boot) within a microservices architecture and Agile SCRUM environment.</li>
                         <li>Led a smartphone transaction back-office project using Next.js and TypeScript.</li>
                         <li>Implemented Quarkus modules with native compilation and deployed using Docker, Jenkins, and OpenShift.</li>
                         <li>Collaborated with a team of 15 members to ensure high-quality, maintainable code.</li>
-                        <li>Led project end-to-end, ensuring communication between stakeholders and team members.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold">Fullstack Engineer Intern (June 2023 – August 2023)</h3>
+                    <p class="text-gray-700">Global Changer - Berlin, Germany</p>
+                    <ul class="list-disc ml-6 mt-4 text-gray-600 space-y-2">
+                        <li>Developed features using Ruby on Rails and Vue.js for internal applications.</li>
+                        <li>Participated in code reviews and sprint retrospectives, contributing to overall product quality and performance.</li>
+                        <li>Collaborated across teams to maintain SCRUM methodologies and ensure timely delivery.</li>
                     </ul>
                 </div>
             </div>
@@ -63,47 +103,69 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-10 bg-gray-50">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Education</h2>
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="container mx-auto fade-in">
+            <h2 class="text-4xl font-bold mb-10 text-center">Education</h2>
             <div>
-                <h3 class="text-xl font-semibold">Master of Science in Software Engineering (2021 – September 2024)</h3>
+                <h3 class="text-2xl font-semibold">Master of Science in Software Engineering (2021 – September 2024)</h3>
                 <p class="text-gray-700">IMT Atlantique - France</p>
             </div>
-            <div class="mt-4">
-                <h3 class="text-xl font-semibold">Associate's Degree in Computer Science (2019 – 2021)</h3>
+            <div class="mt-10">
+                <h3 class="text-2xl font-semibold">Associate's Degree in Computer Science (2019 – 2021)</h3>
                 <p class="text-gray-700">IUT de Bayonne et du Pays Basque - France</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-10">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Projects</h2>
-            <div class="space-y-4">
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto fade-in">
+            <h2 class="text-4xl font-bold mb-10 text-center">Projects</h2>
+            <div class="space-y-12">
                 <div>
-                    <h3 class="text-xl font-semibold">RAIMED 2 Diagnostic App</h3>
-                    <p class="text-gray-700">Developed a Vue.js diagnostic app for medical students in collaboration with Nantes University Hospital.</p>
+                    <h3 class="text-2xl font-semibold">RAIMED 2 Diagnostic App</h3>
+                    <p class="text-gray-700 mt-4">Developed a Vue.js diagnostic app for medical students in collaboration with Nantes University Hospital.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold">Web Interface for Teachers</h3>
-                    <p class="text-gray-700">Developed a Vue.js web interface to manage student information and monitor activity.</p>
+                    <h3 class="text-2xl font-semibold">Web Interface for Teachers</h3>
+                    <p class="text-gray-700 mt-4">Developed a Vue.js web interface to help teachers manage and navigate student data and progress efficiently.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold">Weather and Flight Sensor Data Project</h3>
-                    <p class="text-gray-700">Developed a Go project to retrieve and return weather data from airport sensors including temperature, wind speed, and pressure.</p>
+                    <h3 class="text-2xl font-semibold">Weather and Flight Sensor Data Project</h3>
+                    <p class="text-gray-700 mt-4">Developed a Go project to retrieve and return weather data from airport sensors including temperature, wind speed, and pressure.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-100 py-6">
+    <footer class="bg-gray-100 py-10">
         <div class="container mx-auto text-center">
             <p class="text-gray-600">&copy; 2024 Antonin Maystre - All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Fonction pour gérer l'effet d'apparition lors du scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.fade-in');
+            const options = {
+                threshold: 0.2
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
